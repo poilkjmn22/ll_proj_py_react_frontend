@@ -5,8 +5,9 @@ on:
     branches: [ main ]
   workflow_dispatch:
 
+# 确保这些权限配置正确
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
