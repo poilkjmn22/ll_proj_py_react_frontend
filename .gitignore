@@ -26,3 +26,5 @@ build
 
 .vercel
 .react-router
+
+actions-runner/*.zip
