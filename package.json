@@ -1,5 +1,6 @@
 {
   "name": "learning-logs-frontend",
+  "homepage": "https://github.com/poilkjmn22/ll_proj_py_react_frontend.git",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -9,7 +10,9 @@
     "build": "react-router build --config ./vite.config.prod.ts",
     "dev": "react-router dev --config ./vite.config.dev.ts",
     "start": "react-router-serve ./build/server/index.js",
-    "typecheck": "react-router typegen && tsc"
+    "typecheck": "react-router typegen && tsc",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build/client"
   },
   "dependencies": {
     "@react-router/node": "^7.4.1",
@@ -30,6 +33,7 @@
     "eslint": "^9.21.0",
     "eslint-plugin-react-hooks": "^5.1.0",
     "eslint-plugin-react-refresh": "^0.4.19",
+    "gh-pages": "^6.3.0",
     "globals": "^15.15.0",
     "react-router-devtools": "^1.1.8",
     "tailwindcss": "^4.0.17",
