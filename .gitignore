@@ -28,3 +28,5 @@ build
 .react-router
 
 actions-runner/*.zip
+
+deploy.config*

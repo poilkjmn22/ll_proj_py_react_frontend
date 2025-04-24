@@ -9,7 +9,12 @@
     "build": "react-router build --config ./vite.config.prod.ts",
     "dev": "react-router dev --config ./vite.config.dev.ts",
     "start": "react-router-serve ./build/server/index.js",
-    "typecheck": "react-router typegen && tsc"
+    "typecheck": "react-router typegen && tsc",
+    "deploy-only": "node ./node_modules/@toolsjs-cli/file-helper/bin/cli.js deploy",
+    "deploy": "npm run typecheck && npm run build && npm run deploy-only",
+    "build-analyzer": "node ./node_modules/@toolsjs-cli/build-analyzer/bin/cli.js",
+    "deploy-diff": "npm run typecheck && npm run build && npm run build-analyzer && npm run deploy-only",
+    "deploy-diff-only": "npm run build-analyzer && npm run deploy-only"
   },
   "dependencies": {
     "@react-router/node": "^7.4.1",
@@ -23,6 +28,8 @@
     "@eslint/js": "^9.21.0",
     "@react-router/dev": "^7.4.1",
     "@tailwindcss/vite": "^4.0.17",
+    "@toolsjs-cli/build-analyzer": "^1.0.1",
+    "@toolsjs-cli/file-helper": "^1.0.6",
     "@types/node": "^22.13.14",
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",

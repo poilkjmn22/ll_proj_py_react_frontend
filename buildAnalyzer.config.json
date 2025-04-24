@@ -1,0 +1,11 @@
+    {
+        "buildDir": "build",
+        "reportDir": "buildReport",
+        "exclude": "buildReport|\\.gz$",
+        "maxCount": "20%",
+        "minCount": 10,
+        "overSizeThreshold": "100kb",
+        "reportMode": "console",
+        "filesizeSpec": "si",
+        "noDiff": false
+    }
